@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario universidad de Nodo-Eafit">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario Nodo</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #013C58;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #F5A201;
+            font-family: "Bungee", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h4{
+            display: block;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+
+        /* Imagen debajo del título */
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 30%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px #d3f4fd solid;
+            border-radius: 10px;
+            margin-bottom: 3%;
+        }
+
+        /* Formularios */
+        form {
+            background: #00537A;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Etiquetas y campos */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            background-color: #d3f4fd;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Botones */
+        button,
+        input[type="reset"] {
+            display: inline-block;
+            padding: 12px 20px;
+            margin-right: 10px;
+            font-size: 1em;
+            color: #000000;
+            background-color: #ffba42;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        button:hover,
+        input[type="reset"]:hover {
+            background-color: #ffd35b;
+        }
+
+        /* Opciones de carrera y modalidad */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        h3 {
+            display: block;
+            font-size: 1.17em;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #F5A201;
+            font-family: "Bungee", sans-serif;
+            font-style: normal;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* Separación de cuadros */
+        form + form {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registro NODO EAFIT</h1>
+    <div class="image-container">
+        <img src="img/fotico.png" alt="Descripción de la imagen">
+    </div>
+    <form>
+        <div class="cuerpo">
+            <h4 for="nombre">NOMBRE:</h4>
+            <input type="text" id="nombre" name="nombre" placeholder="Kyliams" required>
+            <h4 for="apellido">APELLIDO:</h4>
+            <input type="text" name="apellido" id="apellido" placeholder="Martínez" required>
+            <h4 for="email">EMAIL:</h4>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            <h4 for="direccion">DIRECCIÓN:</h4>
+            <input type="text" name="direccion" id="direccion" placeholder="calle 80 #57-a21">
+            <h4 for="dep">DEPARTAMENTO:</h4>
+            <select name="dep" id="dep"></select>
+            <h4 for="pais">PAÍS:</h4>
+            <select name="pais" id="pais" required></select>
+            <h4 for="phone">TELÉFONO:</h4>
+            <input type="tel" name="tel" id="phone" placeholder="(320) 711 2208">
+            <h3>Descripción personal</h3>
+            <textarea name="description" id="description" cols="40" rows="10" maxlength="300"></textarea>
+            <h3>¿A qué carrera deseas inscribirte?</h3>
+            <div class="checkbox-container">
+                <input type="checkbox" name="carrera" value="JOBS TO BE DONE" required>
+                <label for="jb">JOBS TO BE DONE</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" name="carrera" value="CLOUD NATIVE" required>
+                <label for="cloud">CLOUD NATIVE</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" name="carrera" value="FRONTEND" required>
+                <label for="front">FRONTEND</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" name="carrera" value="BACKEND" required>
+                <label for="backe">BACKEND</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" name="carrera" value="FUNDAMENTALS" required>
+                <label for="funds">FUNDAMENTALS</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" name="carrera" value="PYTHON" required>
+                <label for="pyt">PYTHON</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" name="carrera" value="MARKETING DIGITAL" required>
+                <label for="mark">MARKETING DIGITAL</label>
+            </div>
+            <h3>Modalidad</h3>
+            <div class="checkbox-container">
+                <input type="radio" name="modalidad" value="Presencial" required>
+                <label for="prese">PRESENCIAL</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="radio" name="modalidad" value="Online" required>
+                <label for="onl">ONLINE</label>
+            </div>
+            <h3>¿Estás trabajando actualmente?</h3>
+            <div class="checkbox-container">
+                <input type="radio" name="trabajo" value="Si">
+                <label for="si">SI</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="radio" name="trabajo" value="No">
+                <label for="no">NO</label>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <button type="button">ENVIAR</button>
+            <input type="reset" value="ELIMINAR">
+        </div>
+    </form>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
